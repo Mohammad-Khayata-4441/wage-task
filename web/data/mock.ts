@@ -58,6 +58,7 @@ export const PRODUCTS_MOCK_DATA: Product[] = [
       }
     ]
   },
+  // رابط معطوب لاختبار ظهور صورة بديلة عند فشل تحميل الصورة
   {
     id: 3,
     name: "Relaxed Tapered Trousers",
@@ -68,7 +69,7 @@ export const PRODUCTS_MOCK_DATA: Product[] = [
         color: "Dark Navy",
         colorCode: "#1B2430",
         images: [
-          "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=700&q=80",
+          "https://images.unsplash.com/photo-0000000000000-000000000000?auto=format&fit=crop&w=700&q=80",
           "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80"
         ]
       },

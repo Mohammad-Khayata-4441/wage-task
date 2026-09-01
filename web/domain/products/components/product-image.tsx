@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/cn";
-import { BrokenImageIcon } from "./icons";
+import { SpinnerIcon } from "./icons";
 
 interface ProductImageProps {
   src?: string;
@@ -21,9 +21,9 @@ export function ProductImage({ src, alt, sizes, priority, className }: ProductIm
 
   if (!src || failedSrc === src) {
     return (
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-surface-muted text-ink-subtle">
-        <BrokenImageIcon className="h-7 w-7" />
-        <span className="text-[10px] uppercase tracking-[0.08em]">Unavailable</span>
+      <div className="absolute inset-0 flex items-center justify-center bg-surface-muted p-6">
+        {/* eslint-disable-next-line @next/next/no-img-element -- static local SVG, optimization adds no value */}
+        <img src="/fallback.svg" alt={alt} className="h-full max-w-[65%] object-contain opacity-90" />
       </div>
     );
   }
@@ -33,7 +33,9 @@ export function ProductImage({ src, alt, sizes, priority, className }: ProductIm
   return (
     <>
       {!isReady && (
-        <div className="shimmer absolute inset-0 overflow-hidden bg-surface-muted" />
+        <div className="absolute inset-0 flex items-center justify-center bg-surface-muted">
+          <SpinnerIcon className="h-6 w-6 animate-spin text-ink-subtle" />
+        </div>
       )}
       <Image
         src={src}
