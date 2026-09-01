@@ -11,3 +11,11 @@ export interface Product {
   oldPrice?: number;
   variants: ProductVariant[];
 }
+
+export type VariantSelection = Record<number, number>;
+
+export interface ViewerTarget {
+  product: Product;
+  variantIndex: number;
+  imageIndex: number;
+}
