@@ -1,5 +1,11 @@
 # WEGE — Product Gallery & Variant Experience
 
+Implementation of the [assessment brief](./WEGE_Frontend_Technical_Assessment.md): the same product-gallery/variant experience built twice — Next.js (`/web`) and Expo/React Native (`/mobile`).
+
+## Live demo
+
+- Web: https://wage-gallery.vercel.app/
+- Mobile: run locally via `npx expo start` (Expo Go) — no EAS preview build published yet.
 
 ## Setup
 
@@ -7,6 +13,8 @@
 cd web && npm install && npm run dev      # Next.js — http://localhost:3000
 cd mobile && npm install && npx expo start # Expo — scan QR with Expo Go, or press i/a
 ```
+
+Each app has its own README ([`/web`](./web/README.md), [`/mobile`](./mobile/README.md)) with architecture notes, trade-offs, and known limitations.
 
 ## Non-core libraries
 
