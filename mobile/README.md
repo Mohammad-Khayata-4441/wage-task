@@ -9,6 +9,15 @@ npm install
 npx expo start   # scan the QR with Expo Go, or press i / a
 ```
 
+Two ways to run it live, no local machine needed:
+
+- **Installable APK (Android)** — download and install directly, no Expo Go required:
+  https://expo.dev/accounts/mohammadkhayata/projects/mobile/builds/01edc7af-bb95-4a01-aaec-ee4de48c1f1e
+- **EAS Update preview (Expo Go, iOS or Android)** — open the link with Expo Go installed:
+  https://expo.dev/preview/update?message=Preview%20build%20for%20WEGE%20assessment&updateRuntimeVersion=1.0.0&createdAt=2026-09-01T17%3A22%3A55.000Z&slug=mobile&projectId=09c05cb1-1f60-420b-b2be-c6293976aa8c&group=e6ca5949-1c2c-434d-9a68-31761e572749
+
+Project is EAS-linked (`@mohammadkhayata/mobile`). The APK was built with `eas build -p android --profile preview` (internal distribution, `eas.json`); the update was published with `eas update --branch preview`. Re-run either after future changes to refresh the links.
+
 ## Architecture
 
 - **`src/domain/products/`** mirrors the web app's structure — `hooks/`, `components/`, `utils/` — same variant-selection and image-viewer hook logic ported 1:1 (`use-variant-selection.ts`, `use-image-viewer.ts`, `use-favorites.ts`), so variant state architecture is identical to web: selection lives above the viewer and survives open/close.
@@ -40,8 +49,8 @@ No off-the-shelf gallery/zoom package — built from gesture primitives since th
 ## Known limitations / trade-offs
 
 - No automated tests — time budget went to gesture correctness on-device.
-- Tested on Android (Expo Go) and iOS Simulator; not tested on a physical iOS device.
-- No EAS preview build configured yet — currently run via `expo start` (Expo Go / simulator), not a standalone installable build.
+- Tested on Android (Expo Go + installed APK) and iOS Simulator; not tested on a physical iOS device.
+- The installable build is Android-only (internal-distribution APK); iOS is Expo Go/EAS Update preview only, since an installable iOS build needs an Apple Developer account for ad-hoc/TestFlight distribution.
 - Favorites state is in-memory only, no persistence.
 
 ## Time spent

@@ -10,6 +10,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.mohammadkhayata.wegegallery",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -23,6 +24,18 @@
     },
     "plugins": [
       "expo-image"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "09c05cb1-1f60-420b-b2be-c6293976aa8c"
+      }
+    },
+    "owner": "mohammadkhayata",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/09c05cb1-1f60-420b-b2be-c6293976aa8c"
+    }
   }
 }

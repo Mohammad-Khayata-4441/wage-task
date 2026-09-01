@@ -5,7 +5,8 @@ Implementation of the [assessment brief](./WEGE_Frontend_Technical_Assessment.md
 ## Live demo
 
 - Web: https://wage-gallery.vercel.app/
-- Mobile: run locally via `npx expo start` (Expo Go) — no EAS preview build published yet.
+- Mobile — installable Android APK: https://expo.dev/accounts/mohammadkhayata/projects/mobile/builds/01edc7af-bb95-4a01-aaec-ee4de48c1f1e
+- Mobile — EAS Update preview (Expo Go, iOS or Android): https://expo.dev/preview/update?message=Preview%20build%20for%20WEGE%20assessment&updateRuntimeVersion=1.0.0&createdAt=2026-09-01T17%3A22%3A55.000Z&slug=mobile&projectId=09c05cb1-1f60-420b-b2be-c6293976aa8c&group=e6ca5949-1c2c-434d-9a68-31761e572749
 
 ## Setup
 
